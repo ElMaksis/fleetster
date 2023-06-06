@@ -1,3 +1,607 @@
+@import "_vars.scss";
+
 body {
     font-family: 'Mulish', sans-serif;
+    background-color: $secondColor;
+    color: $mainColor;
+    box-sizing: border-box;
 }
+
+.container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+// =========================================   Header  =================================================
+
+.header {
+    min-height: 535px;
+    background-image: url('../images/Bitmap-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: $secondColor;
+}
+
+.header__top {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu__item {}
+
+.nav-menu__item+.nav-menu__item {
+    margin-left: 50px;
+}
+
+.nav-menu__link {}
+
+.header__link {}
+
+.logo {
+    max-height: 39px;
+    margin: 20px 0;
+}
+
+.header__logo {}
+
+.header-control {}
+
+.header-control-link {}
+
+.header-control-link+.header-control-link {
+    margin-left: 50px;
+}
+
+.register {
+    padding: 14px 30px;
+    background: $blueColor;
+    border-radius: 2px;
+}
+
+.header__content {
+    text-align: center;
+    height: 100%;
+}
+
+.header__title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: 0.5px;
+    text-shadow: 0px 1px 1px #000000;
+    margin: 118px 0 50px;
+}
+
+.drop-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    &__tabs {
+        flex: 0 1 85%;
+        display: flex;
+        gap: 22px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    &__tab {
+        padding-bottom: 2px;
+        transition: border 3s ease;
+
+        &:hover {
+            border-bottom: 2px solid $secondColor;
+            cursor: pointer;
+        }
+    }
+
+    &__place {
+        width: 380px;
+        background-image: url('../images/location-icon.svg');
+        background-repeat: no-repeat;
+        background-position: 10px 3px;
+        background-size: 13px 90%;
+    }
+
+    &__date {
+        width: 213px;
+    }
+
+    &__btn {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: $secondColor;
+        padding: 18px 49px;
+        background: $greenColor;
+        border-radius: 2px;
+    }
+
+}
+
+.head-input {
+    height: 50px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    color: #7C7C7C;
+    border: none;
+    padding-left: 32px;
+}
+
+// =============================================  Services  ================================================
+
+.service {
+    padding: 145px 0 164px;
+    max-width: 676px;
+    margin: 0 auto;
+    text-align: center;
+
+    &__title {
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 44px;
+        letter-spacing: 0.5px;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.53px;
+        margin: 20px 0 35px;
+        max-width: 636px;
+    }
+
+    &__link {
+        color: $greenColor;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin: 0 35px;
+
+        &--btn {
+            padding: 18px 48px;
+            background-color: $greenColor;
+            color: $secondColor;
+        }
+    }
+}
+
+// =======================================  Places  ================================================
+
+
+.title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 0.5px;
+}
+
+.places {
+    &__title {
+        text-align: center;
+        margin-bottom: 65px;
+    }
+
+    &__box {
+        // display: flex;
+        // flex-wrap: wrap;
+        // gap: 40px;
+        display: grid;
+        // grid-template-columns: 4;
+        // grid-template-rows: 3;
+        grid-template-areas:
+            "1 2 3 3"
+            "4 5 3 3"
+            "4 6 6 7"
+        ;
+    }
+
+    &__item {
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $secondColor;
+    }
+
+    &__country {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: 0.5px;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    &__ditailse {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // display: none;
+    }
+
+    &__book-link {
+        padding: 10px 12px;
+        background-color: $blueColor;
+        border-radius: 2px;
+        margin: 16px 0 12px;
+        max-width: 125px;
+    }
+
+    &__offers-link {
+        padding-bottom: 2px;
+        border-bottom: 2px solid $secondColor;
+    }
+
+    &__book-link,
+    &__offers-link {
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 14px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+}
+
+.item-1 {
+    background-image: url('../images/places/place-1.jpg');
+    flex: 0 1 270px;
+    height: 270px;
+    grid-area: 1;
+}
+
+.item-2 {
+    background-image: url('../images/places/place-2.jpg');
+    flex: 0 1 270px;
+    height: 270px;
+    grid-area: 2;
+}
+
+.item-3 {
+    background-image: url('../images/places/place-3.jpg');
+    flex: 0 1 580px;
+    height: 580px;
+    grid-area: 3;
+}
+
+.item-4 {
+    background-image: url('../images/places/place-4.jpg');
+    flex: 0 1 270px;
+    height: 580px;
+    grid-area: 14;
+}
+
+.item-5 {
+    background-image: url('../images/places/place-5.jpg');
+    flex: 0 1 270px;
+    height: 270px;
+    grid-area: 5;
+}
+
+.item-6 {
+    background-image: url('../images/places/place-6.jpg');
+    flex: 0 1 580px;
+    height: 270px;
+    grid-area: 6;
+}
+
+.item-7 {
+    background-image: url('../images/places/place-7.jpg');
+    flex: 0 1 270px;
+    height: 270px;
+    grid-area: 7;
+
+}
+
+
+// =================================  Top pick ==========================================
+
+
+.top-pick {
+    padding: 240px 0;
+
+    &__container {
+        max-width: 1260px;
+        margin: 0 auto;
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 55px;
+    }
+
+    &__btn {
+        padding: 9px 18px;
+        color: $secondColor;
+        background-color: $orangeColor;
+        border-radius: 2px;
+        border: none;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin: 0 6px;
+    }
+
+    &__slider {
+        display: flex;
+    }
+
+    &__item {
+        border: 1px solid red;
+        background-color: $secondColor;
+        width: 320px;
+        height: 400px;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: contain;
+        display: flex;
+        padding: 0 15px 20px;
+        position: relative;
+    }
+
+    &__item-1 {
+        background-image: url('../images/cars/car-1.jpg');
+    }
+
+    &__item-2 {
+        background-image: url('../images/cars/car-2.jpg');
+    }
+
+    &__item-3 {
+        background-image: url('../images/cars/car-3.jpg');
+    }
+
+    &__inner {
+        margin-top: auto;
+        width: 100%;
+    }
+
+    &__pre-text {
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+
+        &:before {
+            content: url('../images/arrow.svg');
+            padding-right: 12px;
+        }
+    }
+
+    &__model {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: 0.42px;
+        margin: 18px 0 6px;
+    }
+
+    &__sub-title {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 19px;
+        letter-spacing: 0.47px;
+    }
+
+    &__desc {
+        font-weight: 200;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.5px;
+        margin: 5px 0 20px;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 12px 20px;
+        color: $secondColor;
+        background-color: $blueColor;
+        border-radius: 2px;
+    }
+
+    &__parametrs {
+        text-align: right;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        position: absolute;
+        right: 15px;
+        bottom: 27px;
+    }
+
+    &__doors:before {
+        content: url('../images/doors.svg');
+        padding-right: 5px;
+    }
+
+    &__person:before {
+        content: url('../images/persons.svg');
+        padding-right: 5px;
+    }
+}
+
+// =====================================  Review  ==========================================
+
+
+.review {
+    background-color: #F8F8F8;
+    padding: 95px 0 105px;
+
+    &__container {
+        max-width: 980px;
+        padding: 0 15px;
+        margin: 0 auto;
+        background-image: url('../images/reviews-bg.jpg');
+        background-repeat: no-repeat;
+        background-position: 85% center;
+        background-size: contain;
+    }
+
+    &__inner {
+        max-width: 450px;
+        padding: 15px 0;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 38px;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+    }
+
+    &__link {
+        color: $blueColor;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    &__btn {
+        display: inline-block;
+        padding: 18px 44px;
+        border-radius: 2px;
+        background-color: $blueColor;
+        color: $secondColor;
+        margin: 30px 80px 60px 0;
+    }
+
+    &__partners {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 16px;
+
+        &-logo {
+            display: inline-block;
+            margin: 0 43px 40px;
+        }
+    }
+}
+
+
+// ================================  Info  =======================================
+
+
+.info {
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 48px;
+        text-align: center;
+        letter-spacing: 0.41px;
+        margin-bottom: 7px;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 23px;
+        margin-bottom: 45px;
+    }
+}
+
+.info-apps,
+.info-news {
+    padding: 100px 0;
+    max-width: 490px;
+    text-align: center;
+}
+
+.info-apps {
+    padding-right: 60px;
+    border-right: 1px solid #E8E8E8;
+
+    &__img {
+        margin: 0 10px;
+    }
+}
+
+.info-news {
+    padding-left: 60px;
+
+    &__form {
+        display: flex;
+        position: relative;
+    }
+
+    &__email {
+        position: relative;
+        height: 50px;
+        width: 260px;
+        outline: transparent;
+        padding-left: 45px;
+        font-size: 18px;
+    }
+
+    &__img {
+        position: absolute;
+        top: 18px;
+        left: 17px;
+    }
+
+    &__btn {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        padding: 18px 38px;
+        background-color: $blueColor;
+        color: $secondColor;
+        border: none;
+        outline: transparent;
+    }
+}
+
+
+// ==================================  Footer  =========================================

@@ -9,50 +9,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/myReset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Fleetster</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="header__top">
-            <nav class="nav">
-                <ul class="nav-menu">
-                    <li class="nav-menu__item">
-                        <a class="nav-menu__link" href="#">
-                            About
-                        </a>
-                    </li>
-                    <li class="nav-menu__item">
-                        <a class="nav-menu__link" href="#">
-                            Contact
-                        </a>
-                    </li>
-                    <li class="nav-menu__item">
-                        <a class="nav-menu__link" href="#">
-                            FAQs
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <a class="header__link" href="#">
-                <img class="logo header__logo" src="images/fleetster_logo.png" alt="fleetster logo">
-            </a>
-            <div class="header-control">
-                <a class="header-control-link" href="#">Manage booking</a>
-                <a class="header-control-link" href="#">Sign in</a>
-                <a class="header-control-link" href="#">Register</a>
+        <div class="container">
+            <div class="header__top">
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                About
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                FAQs
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a class="header__link" href="#">
+                    <img class="logo header__logo" src="images/fleetster_logo.png" alt="fleetster logo">
+                </a>
+                <div class="header-control">
+                    <a class="header-control-link" href="#">Manage booking</a>
+                    <a class="header-control-link" href="#">Sign in</a>
+                    <a class="header-control-link register" href="#">Register</a>
+                </div>
             </div>
-        </div>
-        <div class="header__content">
-            <h1 class="header__title">
-                Find your ideal car from 500+ cars
-            </h1>
-            <div class="drop-block">
-                <input class="drop-block__place" type="text">
-                <input class="drop-block__date" type="date">
-                <input class="drop-block__date" type="date">
-                <button class="drop-block__btn">search</button>
+            <div class="header__content">
+                <h1 class="header__title">
+                    Find your ideal car from 500+ cars
+                </h1>
+                <div class="drop-block">
+                    <div class="drop-block__tabs">
+                        <div class="drop-block__tab" data-drop="1">
+                            <p>Same as Drop-off</p>
+                        </div>
+                        <div class="drop-block__tab" data-drop="2">
+                            <p>Different Drop-off</p>
+                        </div>
+                    </div>
+                    <input class="head-input drop-block__place" type="text"
+                        placeholder="Enter City, Airport, Station, Region, District…">
+                    <input class="head-input drop-block__date" type="datetime-local" value="2023-04-07T11:30">
+                    <input class="head-input drop-block__date" type="datetime-local" value="2023-04-09T11:30">
+                    <button class="drop-block__btn">search</button>
+                </div>
             </div>
         </div>
     </header>
@@ -65,144 +76,159 @@
             dapibus orci. Maecenas quis vulputate ligula, eu elementum lorem. Maecenas semper sodales ligula. Nam porta
             fermentum est nec blandit.
         </p>
-        <a class="service__link" href="#">Book your car</a>
+        <a class="service__link service__link--btn" href="#">Book your car</a>
         <a class="service__link" href="#">Find out more</a>
     </section>
     <section class="places">
-        <h3 class="places__title">
-            Popular Places
-        </h3>
-        <div class="places__box">
-            <div class="places__item">
-                <p class="place__country">London, United Kingdom</p>
-                <div class="place__ditailse">
-                    <p class="place__country">London, United Kingdom</p>
-                    <a href="" class="place__book-link">Book your car</a>
-                    <a href="" class="place__offers-link">View offers</a>
+        <div class="container">
+            <h3 class="title places__title">
+                Popular Places
+            </h3>
+            <div class="places__box">
+                <div class="places__item item-1">
+                    <!-- <p class="place__country">London, United Kingdom</p> -->
+                    <div class="places__ditailse">
+                        <p class="places__country">London, United Kingdom</p>
+                        <a class="places__book-link" href="#">Book your car</a>
+                        <a class="places__offers-link" href="#">View offers</a>
+                    </div>
                 </div>
-            </div>
-            <div class="places__item">
-                <p class="place__country">Paris, France</p>
-                <div class="place__ditailse">
-                    <p class="place__country">Paris, France</p>
-                    <a href="" class="place__book-link"></a>
-                    <a href="" class="place__offers-link"></a>
+                <div class="places__item item-2">
+                    <!-- <p class="place__country">Paris, France</p> -->
+                    <div class="places__ditailse">
+                        <p class="places__country">Paris, France</p>
+                        <a class="places__book-link" href="#">Book your car</a>
+                        <a class="places__offers-link" href="#">View offers</a>
+                    </div>
                 </div>
-            </div>
-            <div class="places__item">
-                <p class="place__country">Dubai, United Arab Emirates</p>
-                <div class="place__ditailse">
-                    <p class="place__country">Dubai, United Arab Emirates</p>
-                    <a href="" class="place__book-link"></a>
-                    <a href="" class="place__offers-link"></a>
+                <div class="places__item item-3">
+                    <!-- <p class="place__country">Dubai, United Arab Emirates</p> -->
+                    <div class="places__ditailse">
+                        <p class="places__country">Dubai, United Arab Emirates</p>
+                        <a class="places__book-link" href="#">Book your car</a>
+                        <a class="places__offers-link" href="#">View offers</a>
+                    </div>
                 </div>
-            </div>
-            <div class="places__item">
-                <p class="place__country">Amsterdam, Netherlands</p>
-                <div class="place__ditailse">
-                    <p class="place__country">Amsterdam, Netherlands</p>
-                    <a href="" class="place__book-link"></a>
-                    <a href="" class="place__offers-link"></a>
+                <div class="places__item item-4">
+                    <!-- <p class="place__country">Amsterdam, Netherlands</p> -->
+                    <div class="places__ditailse">
+                        <p class="places__country">Amsterdam, Netherlands</p>
+                        <a class="places__book-link" href="#">Book your car</a>
+                        <a class="places__offers-link" href="#">View offers</a>
+                    </div>
                 </div>
-            </div>
-            <div class="places__item">
-                <p class="place__country">Rome, Italy</p>
-                <div class="place__ditailse">
-                    <p class="place__country">
-                        </Rome, Italyp>
-                        <a href="" class="place__book-link"></a>
-                        <a href="" class="place__offers-link"></a>
+                <div class="places__item item-5">
+                    <!-- <p class="place__country">Rome, Italy</p> -->
+                    <div class="places__ditailse">
+                        <p class="places__country">Rome, Italy</p>
+                        <a class="places__book-link" href="#">Book your car</a>
+                        <a class="places__offers-link" href="#">View offers</a>
+                    </div>
                 </div>
-            </div>
-            <div class="places__item">
-                <p class="place__country">New York, NY</p>
-                <div class="place__ditailse">
-                    <p class="place__country">New York, NY</p>
-                    <a href="" class="place__book-link"></a>
-                    <a href="" class="place__offers-link"></a>
+                <div class="places__item item-6">
+                    <!-- <p class="place__country">New York, NY</p> -->
+                    <div class="places__ditailse">
+                        <p class="places__country">New York, NY</p>
+                        <a class="places__book-link" href="#">Book your car</a>
+                        <a class="places__offers-link" href="#">View offers</a>
+                    </div>
                 </div>
-            </div>
-            <div class="places__item">
-                <p class="place__country">Barcelona, Spain</p>
-                <div class="place__ditailse">
-                    <p class="place__country">Barcelona, Spain</p>
-                    <a href="" class="place__book-link"></a>
-                    <a href="" class="place__offers-link"></a>
+                <div class="places__item item-7">
+                    <!-- <p class="place__country">Barcelona, Spain</p> -->
+                    <div class="places__ditailse">
+                        <p class="places__country">Barcelona, Spain</p>
+                        <a class="places__book-link" href="#">Book your car</a>
+                        <a class="places__offers-link" href="#">View offers</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="top-pick">
-        <h4 class="top-pick__title">
-            Top picks from your city
-        </h4>
-        <div class="top-pick__control">
-            <button class="top-pick__btn prev">
-                < PREV</button>
-                    <button class="top-pick__btn next">NEXT ></button>
+        <div class="top-pick__container">
+            <div class="top-pick__head">
+                <h3 class=" title top-pick__title">
+                    Top picks from your city
+                </h3>
+                <div class="top-pick__control">
+                    <button class="top-pick__btn prev">
+                        &#x276E; PREV
+                    </button>
+                    <button class="top-pick__btn next">
+                        NEXT &#x276F;
+                    </button>
+                </div>
+            </div>
+            <div class="top-pick__slider">
+                <div class="top-pick__item top-pick__item-1">
+                    <div class="top-pick__inner">
+                        <p class="top-pick__pre-text">
+                            Most preferred in Full-size SUV
+                        </p>
+                        <h5 class="top-pick__model">
+                            Chevrolet Tahoe
+                        </h5>
+                        <h6 class="top-pick__sub-title">
+                            Full-size SUV
+                        </h6>
+                        <p class="top-pick__desc">
+                            Automatic transmission, Air-conditioning
+                        </p>
+                        <a class="top-pick__link" href="#">Book your car</a>
+                        <div class="top-pick__parametrs">
+                            <span class="top-pick__doors">5</span>
+                            <span class="top-pick__person">7</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-pick__item top-pick__item-2">
+                    <div class="top-pick__inner">
+                        <p class="top-pick__pre-text">
+                            Most preferred in Economy
+                        </p>
+                        <h5 class="top-pick__model">
+                            Hyundai Accent
+                        </h5>
+                        <h6 class="top-pick__sub-title">
+                            Intermediate
+                        </h6>
+                        <p class="top-pick__desc">
+                            Automatic transmission, Unlimited mileage
+                        </p>
+                        <a class="top-pick__link" href="#">Book your car</a>
+                        <div class="top-pick__parametrs">
+                            <span class="top-pick__doors">4</span>
+                            <span class="top-pick__person">5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-pick__item top-pick__item-3">
+                    <div class="top-pick__inner">
+                        <p class="top-pick__pre-text">
+                            Most preferred mid-SUV
+                        </p>
+                        <h5 class="top-pick__model">
+                            Kia Sportage
+                        </h5>
+                        <h6 class="top-pick__sub-title">
+                            Intermediate
+                        </h6>
+                        <p class="top-pick__desc">
+                            Automatic transmission, Air-conditioning
+                        </p>
+                        <a class="top-pick__link" href="#">Book your car</a>
+                        <div class="top-pick__parametrs">
+                            <span class="top-pick__doors">4</span>
+                            <span class="top-pick__person">5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="top-pick__slider">
-            <div class="top-pick__item">
-                <p class="top-pick__pre-text">
-                    Most preferred in Full-size SUV
-                </p>
-                <h5 class="top-pick__model">
-                    Chevrolet Tahoe
-                </h5>
-                <h6 class="top-pick__sub-title">
-                    Full-size SUV
-                </h6>
-                <p class="top-pick__desc">
-                    Automatic transmission, Air-conditioning
-                </p>
-                <a class="top-pick__link" href="#">Book your car</a>
-                <div class="top-pick__parametrs">
-                    <span class="top-pick__doors">5</span>
-                    <span class="top-pick__person">7</span>
-                </div>
-            </div>
-            <div class="top-pick__item">
-                <p class="top-pick__pre-text">
-                    Most preferred in Economy
-                </p>
-                <h5 class="top-pick__model">
-                    Hyundai Accent
-                </h5>
-                <h6 class="top-pick__sub-title">
-                    Intermediate
-                </h6>
-                <p class="top-pick__desc">
-                    Automatic transmission, Unlimited mileage
-                </p>
-                <a class="top-pick__link" href="#">Book your car</a>
-                <div class="top-pick__parametrs">
-                    <span class="top-pick__doors">4</span>
-                    <span class="top-pick__person">5</span>
-                </div>
-            </div>
-            <div class="top-pick__item">
-                <p class="top-pick__pre-text">
-                    Most preferred mid-SUV
-                </p>
-                <h5 class="top-pick__model">
-                    Kia Sportage
-                </h5>
-                <h6 class="top-pick__sub-title">
-                    Intermediate
-                </h6>
-                <p class="top-pick__desc">
-                    Automatic transmission, Air-conditioning
-                </p>
-                <a class="top-pick__link" href="#">Book your car</a>
-                <div class="top-pick__parametrs">
-                    <span class="top-pick__doors">4</span>
-                    <span class="top-pick__person">5</span>
-                </div>
-            </div>
-        </div>
+
     </section>
     <section class="review">
-        <div class="container">
+        <div class="review__container">
             <div class="review__inner">
                 <h4 class="review__title">
                     5 million reviews and counting
@@ -211,7 +237,7 @@
                     Etiam vel pellentesque velit, ut feugiat nisi. Nullam augue purus, facilisis et varius non,
                     dignissim dapibus orci. Maecenas quis vulputate ligula,
                 </div>
-                <a class="review__link" href="#">Plan your next trip</a>
+                <a class="review__link review__btn" href="#">Plan your next trip</a>
                 <a class="review__link" href="#">View Reviews</a>
                 <p class="review__partners">Our Partners</p>
                 <a class="review__partner-link" href="">
@@ -227,30 +253,38 @@
         </div>
     </section>
     <section class="info">
-        <div class="info-apps">
-            <h5 class="info-apps__title">
-                Fleetster for iOS & Android
-            </h5>
-            <p class="info-apps__text">
-                Download Fleetster app for your mobile device for the easier access to best offers.
-            </p>
-            <img class="info-apps__link" src="images/app-store-link.jpg" alt="App Store Link">
-            <img class="info-apps__link" src="images/google-link.jpg" alt="Google Play Link">
-        </div>
-        <div class="info-news">
-            <h5 class="info-news__title">
-                Sign up for our newsletter
-            </h5>
-            <p class="info-news__text">
-                Don’t miss our new offers and keep up to date.
-            </p>
-            <form calss="info-news__form" action="">
-                <input class="info-news__email" type="email">
-                <img class="info-news__img" src="images/letter-icon.svg" alt="email icon">
-                <button class="info-news__btn" type="submit">
-                    Sign me up
-                </button>
-            </form>
+        <div class="container">
+            <div class="info__inner">
+                <div class="info-apps">
+                    <h5 class="info__title">
+                        Fleetster for iOS & Android
+                    </h5>
+                    <p class="info__text">
+                        Download Fleetster app for your mobile device for the easier access to best offers.
+                    </p>
+                    <a class="info-apps__link" href="">
+                        <img class="info-apps__img" src="images/app-store-link.jpg" alt="App Store Link">
+                    </a>
+                    <a class="info-apps__link" href="">
+                        <img class="info-apps__img" src="images/google-link.jpg" alt="Google Play Link">
+                    </a>
+                </div>
+                <div class="info-news">
+                    <h5 class="info__title">
+                        Sign up for our newsletter
+                    </h5>
+                    <p class="info__text">
+                        Don’t miss our new offers and keep up to date.
+                    </p>
+                    <form class="info-news__form" action="">
+                        <input class="info-news__email" type="email">
+                        <img class="info-news__img" src="images/letter-icon.svg" alt="email icon">
+                        <button class="info-news__btn" type="submit">
+                            Sign me up
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
     <footer class="footer">
